@@ -6,7 +6,7 @@ phases:
       - curl -fL -o corretto.rpm https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.rpm
       - yum localinstall -y corretto.rpm
       - export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
-      - mvnw clean install
+      - ./mvnw clean install
       - echo Logging in to Amazon ECR...
       - aws --version
       - REPOSITORY_URI=362418404290.dkr.ecr.us-east-2.amazonaws.com/mynamespace/addcountries
